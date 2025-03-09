@@ -8,11 +8,11 @@ function addToCart(productName, price) {
 }
 
 // Add event listeners to buttons
-document.querySelectorAll('.product button').forEach(button => {
+document.querySelectorAll('.product-card button').forEach(button => {
     button.addEventListener('click', () => {
         const product = button.parentElement;
         const productName = product.querySelector('h3').innerText;
-        const productPrice = product.querySelector('p').innerText;
+        const productPrice = product.querySelector('.price').innerText;
         addToCart(productName, productPrice);
     });
 });
